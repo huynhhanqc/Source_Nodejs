@@ -2,7 +2,7 @@ class OrderHSK
 {
     get SearchSku ()
     {
-        return $("#search");
+        return $("//input[@id='search']");
     }
     get BtnSearch ()
     {
@@ -23,6 +23,10 @@ class OrderHSK
     get TextOder ()
     {
         return $("//p[@class='text-sm font-normal']");
+    }
+    get ContinueOder () //Tiếp tục mua hàng
+    {
+        return $("(//span[@class='font-sans text-lg font-bold'])[1]");
     }
 
 

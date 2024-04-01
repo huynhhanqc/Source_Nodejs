@@ -4,6 +4,7 @@ import orderHSK from "../pageobjectsHSKvn/OrderHSK.page.js"
 describe("Check Out Hasaki.vn", async () => {
     before(async () => {
       await browser.url("https://staging.hasaki.vn/");
+      await expect(browser).toHaveUrl('https://staging.hasaki.vn/')
       await browser.maximizeWindow();
       await loginpageHSK.LoginHSK("0344535989", "Truonghan1506");
       await browser.pause(1000);
@@ -21,11 +22,19 @@ describe("Check Out Hasaki.vn", async () => {
         await browser.pause(2000);
         await orderHSK.TextOder.getText();
         await browser.pause(2000);
-        await browser.saveScreenshot('./test/screenshot.png');
+        await expect(orderHSK.TextOder).toBeDisplayed();
+
+        
+        
+        
+        
+        
+        // await browser.saveScreenshot('./test/screenshot.png');
         
         
 
     });
+    
   }
 
   

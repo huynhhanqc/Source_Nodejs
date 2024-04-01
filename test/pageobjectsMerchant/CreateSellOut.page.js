@@ -15,7 +15,7 @@ class Createsellout
     }
     get ChoosefromDate ()
     {
-        return $("(//td[@class='available'])[6]");
+        return $("(//td[@class='today active start-date active end-date available'])[1]");
     }
     get ToDate ()
     {
@@ -23,7 +23,7 @@ class Createsellout
     }
     get Choosetodate ()
     {
-        return $("(//td[@class='weekend off ends available'])[7]");
+        return $("(//td[@class='available'])[65]");
     }
     get Customer ()
     {
@@ -54,7 +54,7 @@ class Createsellout
     get InputBrand ()
     {
         return $("//li[contains(text(),'BIODERMA')]");
-    }
+    }   
     get Orderminspend ()
     {
         return $("//input[@id='amountMincondtion']");
