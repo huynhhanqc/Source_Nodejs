@@ -2,13 +2,13 @@ class PageProduct
 {
 get Productpage ()
 {
-    return $("(//a[@class='menu-link']//span[@class='menu-title'])[14]");
+    return $("(//div[@id='menu-item-product']//span[@class='menu-title'])[1]");
 }
 get AddNewProductPage ()
 {
-    return $("(//div[@class='menu-item']//a[@id='create'])[2]");
+    return $("//span[contains(text(),'Add New Product')]");
 }
 
 
 }
-// export default new PageProduct();
+export default new PageProduct();

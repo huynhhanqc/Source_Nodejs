@@ -1,5 +1,5 @@
 
-class Createsellout 
+class Newsellout 
 {
     get PromotionName ()
     {
@@ -23,7 +23,7 @@ class Createsellout
     }
     get Choosetodate ()
     {
-        return $("(//td[@class='available'])[65]");
+        return $('//*[@id="kt_body"]/div[7]/div[2]/div[1]/table/tbody/tr[5]/td[1]');
     }
     get Customer ()
     {
@@ -112,4 +112,4 @@ class Createsellout
 
 
 }
-export default new Createsellout();
+export default new Newsellout();

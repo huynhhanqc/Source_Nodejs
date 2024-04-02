@@ -68,4 +68,4 @@ get SaveNext ()
 
 
 }
-// export default new AddProduct();
+export default new AddProduct();
