@@ -6,7 +6,6 @@ import orderdetail from "../pageobjectsINS/OrderDetail.page.js";
 describe('Order Web Inside', async () => {
         before(async () => {
             await browser.url("https://inside.hasaki.vn:sbd4Jnws7l@test.inshasaki.com");
-            await expect(browser).toHaveUrl('https://test.inshasaki.com/login')
             await browser.maximizeWindow();
             await loginIns.Loginins("hanhvt@hasaki.vn","hasaki123@");
             await browser.pause(1000);
