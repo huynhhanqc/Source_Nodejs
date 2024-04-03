@@ -27,7 +27,7 @@ class Newsellout
     }
     get Customer ()
     {
-        return $("(//span[@role='combobox'])[2]");
+        return $("(//*[@role='combobox'])[2]");
     }
     get CusOffline ()
     {
@@ -41,7 +41,7 @@ class Newsellout
     //Promotion Condition (Type Brand)
     get ConditionType ()
     {
-        return $("(//span[@role='combobox'])[4]"); //choose type
+        return $("(//*[@role='combobox'])[4]"); //choose type
     }
     get TypeBrand ()
     {

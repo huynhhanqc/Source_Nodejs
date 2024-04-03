@@ -22,7 +22,7 @@ describe("Create Quotation M", async () => {
         await addquotation.Inputsku.setValue ("422210173");
         await addquotation.Acceptsku.click ();
         await addquotation.Quantity.clearValue();
-        await addquotation.Quantity.setValue("5");
+        await addquotation.Quantity.setValue("1"); 
         await addquotation.Type.click ();
         await addquotation.Typevnd.click ();
         await addquotation.Btnsave.click ();
