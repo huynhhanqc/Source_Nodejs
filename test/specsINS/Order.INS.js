@@ -20,12 +20,36 @@ describe("Order Web Inside", async () => {
     await order.BtnAddNew.click();
     await order.CheckPhone.setValue("0344535989");
     await order.Check.click();
+    await browser.pause(1000);
     await order.OrderAddress.setValue("555 duong 3/2 quan 10");
+    await browser.pause(1000);
     await order.SelectStore.click();
     await order.ClickStore.click();
     await order.BtnCreate.click();
     await orderdetail.ShippingAddress.setValue("555 duong 3/2 quan 10");
+    await orderdetail.Shipping.click ();
+    await orderdetail.ClickShipping.click ();
+    await orderdetail.Note.setValue ("Han Test Order");
+    await orderdetail.SaveInfor.click ();
+    await browser.pause(2000);
+    await orderdetail.SelectSku.click ();
+    await orderdetail.InputSku.setValue("100190113");
+    await browser.pause(2000);
+    await orderdetail.ClickSku.click ();
+    await browser.pause(2000);
+    await orderdetail.Qty.clearValue();
+    await orderdetail.Qty.setValue("5");
+    await browser.pause(2000);
+    await orderdetail.AddItem.click ();
+    await orderdetail.SaveDetail.click ();
+    await expect(orderdetail.SaveDetail).toBeDisplayedInViewport();
+    await orderdetail.TextOrder.getText();
+    await orderdetail.Status2.click ();
+    await browser.saveScreenshot('./test/screenshot.png');
 
-    await browser.pause(15000);
+
+
+
+    await browser.pause(7000);
   });
 });
