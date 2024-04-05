@@ -10,33 +10,50 @@ describe("Create Quotation M", async () => {
     after(async () => {
       browser.closeWindow();
     });
-    it('Create Quotation Success', async() => {
+    it('Create One Sku', async() => {
         await addquotation.MenuQuotation.click ();
         await addquotation.CreateQuotation.click ();
-        await addquotation.QuotationType.click ();
-        await addquotation.TypeTester.click ();
         await addquotation.Note.setValue ("TEST");
         await addquotation.Store.click ();
-        await addquotation.Inputtore.click ();
+        await addquotation.InputtoreNGT.click ();
         await addquotation.Product.click ();
         await addquotation.Inputsku.setValue ("422210173");
         await addquotation.Acceptsku.click ();
         await addquotation.Quantity.clearValue();
-        await addquotation.Quantity.setValue("1"); 
+        await addquotation.Quantity.setValue("2"); 
         await addquotation.Type.click ();
         await addquotation.Typevnd.click ();
         await addquotation.Btnsave.click ();
         await addquotation.Pupok.click ();
         await addquotation.BtnResqst.click ();
         await browser.acceptAlert();
+        await addquotation.TextCode.getText();
+      });
+    it('Create multi-SKU ', async () => {
+        await addquotation.MenuQuotation.click ();
+        await addquotation.CreateQuotation.click ();
+        await addquotation.Note.setValue ("TEST");
+        await addquotation.Store.click ();
+        await addquotation.InputtoreLVV.click ();
+        await addquotation.Product.click ();
+        await addquotation.Inputsku.setValue ("422210173");
+        await addquotation.Acceptsku.click ();
+        await addquotation.Quantity.clearValue();
+        await addquotation.Quantity.setValue("2");
+        await addquotation.Addnewrow.click ();
+        await addquotation.Store.click();
+        await addquotation.InputtoreNGT.click ();
+        await addquotation.Product.click ();
         
-        
-        await browser.pause(1000);
-        
+
+
+
+
+          
+        });
 
 
 
 
 
     });
-});

@@ -26,14 +26,17 @@ class QuotationM {
   get Store() {
     return $("(//span[@role='combobox'])[2]");
   }
-  get Inputtore() {
+  get InputtoreLVV() {
     return $("//ul[@role='listbox']//li[5]");
   }
-  get Product() {
-    return $("(//span[@role='combobox'])[3]");
+  get InputtoreNGT() {
+    return $("//ul[@role='listbox']//li[6]");
   }
-  get Inputsku() {
-    return $("//input[@role='searchbox']");
+  get InputtoreNTT() {
+    return $("//ul[@role='listbox']//li[9]");
+  }
+  get Product() {
+    return $("//*[@aria-labelledby='select2-selectProductSku_1-container']");
   }
   get Inputsku() {
     return $("//input[@role='searchbox']");
@@ -53,7 +56,7 @@ class QuotationM {
   get Typevnd() {
     return $("//select[@id='discount_type_1']//option[2]");
   }
-  get Acction() {
+  get Acction() { 
     return $("//td[@class='text-center']//i");
   }
   get Addnewrow() {
@@ -70,6 +73,9 @@ class QuotationM {
   }
   get BtnResqst() {
     return $("//div[@class='card-toolbar']//a[3]");
+  }
+  get TextCode() {
+    return $("//div[@class='card-body bg-light-info']//p[1]");
   }
 }
 export default new QuotationM();
