@@ -12,7 +12,7 @@ describe("Check Out Hasaki.vn", async () => {
     after(async () => {
        browser.closeWindow();
     });
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 10; i++) {
     it('Payment On Delivery COD Success',async () => {
         await orderHSK.SearchSku.setValue ("100230056");
         await orderHSK.BtnSearch.click ();

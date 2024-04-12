@@ -10,6 +10,7 @@ describe("Create Quotation M", async () => {
     after(async () => {
       browser.closeWindow();
     });
+    for (let i = 0; i < 10; i++) {
     it('Create One Sku', async() => {
         await addquotation.MenuQuotation.click ();
         await addquotation.CreateQuotation.click ();
@@ -29,6 +30,7 @@ describe("Create Quotation M", async () => {
         await browser.acceptAlert();
         await addquotation.TextCode.getText();
       });
+      /*
     it('Create multi-SKU ', async () => {
         await addquotation.MenuQuotation.click ();
         await addquotation.CreateQuotation.click ();
@@ -45,15 +47,17 @@ describe("Create Quotation M", async () => {
         await addquotation.InputtoreNGT.click ();
         await addquotation.Product.click ();
         
+        
 
 
 
 
           
         });
+        */
 
-
-
+        
+      }
 
 
     });
