@@ -1,6 +1,6 @@
 import loginPage from "../pageobjectsMerchant/LoginMC.page.js";
-import Pagepromotion from "../pageobjectsMerchant/Page.SellOut.page.js";
 import Newsellout from "../pageobjectsMerchant/NewSellOut.page.js";
+import Menu from "../pageobjectsMerchant/Menu.page.js";
 
 describe("Create Promotion Sell Out ", async () => {
   before(async () => {
@@ -13,9 +13,9 @@ describe("Create Promotion Sell Out ", async () => {
     browser.closeWindow();
   });
   it("New Condition Type Product", async () => {
-    await Pagepromotion.PMTprogram.click();
+    await Menu.MenuPromotionProgram.click();
     await browser.pause(1000);
-    await Pagepromotion.createSellOut.click();
+    await Menu.CreatePromotion.click();
     await browser.pause(1000);
     await Newsellout.PromotionName.setValue("Mua 100 Tặng 1.000.000 VND");
     await Newsellout.Note.setValue("Han Test Product");

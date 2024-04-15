@@ -1,10 +1,5 @@
 class QuotationM {
-  get MenuQuotation() {
-    return $("(//span[@class='menu-title'])[4]");
-  }
-  get CreateQuotation() {
-    return $("(//span[@class='menu-title'])[6]");
-  }
+  
   get Receiving() {
     return $("#receivingTime");
   }

@@ -1,12 +1,12 @@
-import loginPage from "../pageobjectsMerchant/LoginMC.page.js";
-import pageprod from "../pageobjectsMerchant/Page.Product.page.js";
-import addprod from "../pageobjectsMerchant/CreateProd.page.js";
+import LoginPage from "../pageobjectsMerchant/LoginMC.page.js";
+import Addprod from "../pageobjectsMerchant/CreateProd.page.js";
+import Menu from "../pageobjectsMerchant/Menu.page.js";
 
 describe("Create Product", async () => {
     before(async () => {
       await browser.url("https://test-merchant.hasaki.vn/login");
       await browser.maximizeWindow();
-      await loginPage.Login("truonghan1506","150699");
+      await LoginPage.Login("truonghan1506","150699");
       await browser.pause(1000);
     });
     after(async () => {
@@ -14,9 +14,9 @@ describe("Create Product", async () => {
     });
     
     it("Create Product Success",async () => {
-        await pageprod.Productpage.click ();
-        await pageprod.AddNewProductPage.click ();
-        await addprod.NameProd.setValue("hihi");
+      await Menu.MenuProduct.click ();
+      await Menu.AddNewProduct.click ();
+        
 
         
 

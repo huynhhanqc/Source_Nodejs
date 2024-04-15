@@ -1,34 +1,35 @@
-import loginPage from "../pageobjectsMerchant/LoginMC.page.js";
-import quotationexcel from "../pageobjectsMerchant/QuotationXslx.page.js";
-import addquotation from "../pageobjectsMerchant/QuotationM.page.js";
+import LoginPage from "../pageobjectsMerchant/LoginMC.page.js";
+import ImportExcel from "../pageobjectsMerchant/QuotationXslx.page.js";
+import MenuMC from "../pageobjectsMerchant/Menu.page.js";
+describe("Quotation Import Excel", async () => {
+  before(async () => {
+    await browser.url("https://test-merchant.hasaki.vn/login");
+    await browser.maximizeWindow();
+    await LoginPage.Login("truonghan1506", "150699");
+    await browser.pause(1000);
+  });
+  after(async () => {
+    browser.closeWindow();
+  });
+  it("Import Excell Success", async () => {
+    await MenuMC.MenuQuotation.click();
+    await browser.pause(1000);
+    await MenuMC.CreateQuotationExcel.click();
+    const filepath = "test/testData/quotation-template.xlsx";
+    const remoteFilePath = await browser.uploadFile(filepath);
+    await ImportExcel.uploadexcel.setValue(remoteFilePath);
+    await ImportExcel.btnValidate.click();
+    browser.acceptAlert();
+    await browser.pause(1000);
+    await ImportExcel.btnSaveQuotation.click ();
+    await ImportExcel.btnOK.click ();
+    await ImportExcel.titleReview.getText ();
+    await ImportExcel.btnRequest.click();
+    browser.acceptAlert();
+    
+     
 
-describe("Create Quotation Excel", async () => {
-    before(async () => {
-      await browser.url("https://test-merchant.hasaki.vn/login");
-      await browser.maximizeWindow();
-      await loginPage.Login("truonghan1506","150699");
-      await browser.pause(1000);
-    });
-    after(async () => {
-      browser.closeWindow();
-    });
-    it('Testcase 1',async () => {
-        await addquotation.MenuQuotation.click ();
-        await browser.pause(2000);
-        await quotationexcel.pageExcel.click ();
-        await quotationexcel.uploadexcel.click ();
-        browser.uploadFile("c:\\Users\\HASAKI\\Downloads\\purchase order confirm (5).xlsx");
-        await quotationexcel.btnValidate.click ();
-
-        await browser.pause(5000);
-        
 
 
-
-
-
-
-
-        
-    });
-})
+  });
+});
