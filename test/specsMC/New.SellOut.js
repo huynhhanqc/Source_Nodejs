@@ -1,6 +1,6 @@
 import loginPage from "../pageobjectsMerchant/LoginMC.page.js";
 import Newsellout from "../pageobjectsMerchant/NewSellOut.page.js";
-import Menu from "../pageobjectsMerchant/Menu.page.js";
+import Menu from "../pageobjectsMerchant/MenuMC.page.js";
 
 describe("Create Promotion Sell Out ", async () => {
   before(async () => {

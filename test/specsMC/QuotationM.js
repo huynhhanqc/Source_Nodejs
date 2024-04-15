@@ -1,6 +1,6 @@
 import LoginPage from "../pageobjectsMerchant/LoginMC.page.js";
 import Addquotation from "../pageobjectsMerchant/QuotationM.page.js"
-import Menu from "../pageobjectsMerchant/Menu.page.js";
+import Menu from "../pageobjectsMerchant/MenuMC.page.js";
 describe("Create Quotation M", async () => {
     before(async () => {
       await browser.url("https://test-merchant.hasaki.vn/login");

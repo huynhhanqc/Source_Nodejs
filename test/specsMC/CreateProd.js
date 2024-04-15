@@ -1,6 +1,6 @@
 import LoginPage from "../pageobjectsMerchant/LoginMC.page.js";
 import Addprod from "../pageobjectsMerchant/CreateProd.page.js";
-import Menu from "../pageobjectsMerchant/Menu.page.js";
+import Menu from "../pageobjectsMerchant/MenuMC.page.js";
 
 describe("Create Product", async () => {
     before(async () => {

@@ -1,6 +1,6 @@
 import LoginPage from "../pageobjectsMerchant/LoginMC.page.js";
 import ImportExcel from "../pageobjectsMerchant/QuotationXslx.page.js";
-import MenuMC from "../pageobjectsMerchant/Menu.page.js";
+import MenuMC from "../pageobjectsMerchant/MenuMC.page.js";
 describe("Quotation Import Excel", async () => {
   before(async () => {
     await browser.url("https://test-merchant.hasaki.vn/login");
