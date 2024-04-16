@@ -1,34 +1,37 @@
 class QuotationM {
-  
-  get Receiving() {
-    return $("#receivingTime");
+  get SelectTime() {
+    return $("//*[@id='receivingTime']");
   }
-  get ChooseDate() {
-    return $("//div[@class='flatpickr-innerContainer']//span[10]");
+  get SetTime() {
+    return $("//*[@class='flatpickr-day 'and text()='29']");
   }
   get QuotationType() {
-    return $("(//span[@role='combobox'])[1]");
+    return $(
+      "//*[@aria-labelledby='select2-quotationType-container']/parent::*"
+    );
   }
   get TypeTester() {
-    return $("(//li[@role='option'])[2]");
+    return $("(//li[text()='Tester']/parent::*)[1]");
   }
   get RequireVAT() {
-    return $("#quotationConfig");
+    return $("//*[@id='quotationConfig']/parent::*");
   }
   get Note() {
-    return $("#quotationNote");
+    return $("//*[@id='quotationNote']");
   }
   get Store() {
-    return $("(//span[@role='combobox'])[2]");
+    return $("//*[@id='select2-store_1-container']/parent::*");
   }
-  get InputtoreLVV() {
-    return $("//ul[@role='listbox']//li[5]");
+  get StoreLVQ() {
+    return $(
+      "//*[@id='select2-store_1-result-efmg-1024'and text()='SHOP - 304 LE VAN QUOI']"
+    );
   }
-  get InputtoreNGT() {
-    return $("//ul[@role='listbox']//li[6]");
+  get StoreLVQLTT() {
+    return $("//*[@id='select2-store_1-result-efmg-1024'and text()='SHOP - 104 LE TRONG TAN']");
   }
-  get InputtoreNTT() {
-    return $("//ul[@role='listbox']//li[9]");
+  get StoreLVQPVT() {
+    return $("//*[@id='select2-store_1-result-efmg-1024'and text()='SHOP - 447 PHAN VAN TRI']");
   }
   get Product() {
     return $("//*[@aria-labelledby='select2-selectProductSku_1-container']");
@@ -49,10 +52,10 @@ class QuotationM {
     return $("#discount_type_1");
   }
   get Typevnd() {
-    return $("//select[@id='discount_type_1']//option[2]");
+    return $("//*[text()=' VND']");
   }
-  get Acction() { 
-    return $("//td[@class='text-center']//i");
+  get Acction() {
+    return $("//*[@class='bi bi-dash-circle-fill red icon-delete fa-lg']/parent::*");
   }
   get Addnewrow() {
     return $("#addRow");

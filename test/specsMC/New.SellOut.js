@@ -1,13 +1,13 @@
-import loginPage from "../pageobjectsMerchant/LoginMC.page.js";
+import LoginPageMC from "../pageobjectsMerchant/LoginMC.page.js";
 import Newsellout from "../pageobjectsMerchant/NewSellOut.page.js";
 import Menu from "../pageobjectsMerchant/MenuMC.page.js";
 
 describe("Create Promotion Sell Out ", async () => {
   before(async () => {
-    await browser.url("https://test-merchant.hasaki.vn/login");
-    await browser.maximizeWindow();
-    await loginPage.Login("truonghan1506", "150699");
-    await browser.pause(1000);
+      await LoginPageMC.open();
+      await browser.maximizeWindow();
+      await LoginPageMC.Login();
+      await browser.pause(1000);
   }); 
   after(async () => {
     browser.closeWindow();
@@ -35,9 +35,7 @@ describe("Create Promotion Sell Out ", async () => {
     await browser.acceptAlert();
   });
   it("New Condition Type Brand", async () => {
-    await Pagepromotion.PMTprogram.click();
-    await browser.pause(1000);
-    await Pagepromotion.createSellOut.click();
+    await Menu.CreatePromotion.click();
     await Newsellout.PromotionName.setValue("Mua 100 Tặng 1.000.000 VND");
     await Newsellout.Note.setValue("Hận Test Brand");
     await Newsellout.FromDate.click();

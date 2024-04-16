@@ -1,12 +1,12 @@
-import LoginPage from "../pageobjectsMerchant/LoginMC.page.js";
+import LoginPageMC from "../pageobjectsMerchant/LoginMC.page.js";
 import Addprod from "../pageobjectsMerchant/CreateProd.page.js";
 import Menu from "../pageobjectsMerchant/MenuMC.page.js";
 
 describe("Create Product", async () => {
     before(async () => {
-      await browser.url("https://test-merchant.hasaki.vn/login");
+      await LoginPageMC.open();
       await browser.maximizeWindow();
-      await LoginPage.Login("truonghan1506","150699");
+      await LoginPageMC.Login();
       await browser.pause(1000);
     });
     after(async () => {

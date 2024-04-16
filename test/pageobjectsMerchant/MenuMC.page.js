@@ -26,7 +26,7 @@ class MenuMC
     }
     get CreatePromotion ()
     {
-        return $("//*[text()='Promotions Program']/parent::*/parent::*//*[text()='Add New Promotion']/parent::a");
+        return $("(//*[text()='Add New Promotion'])[2]/parent::a");
     }
     
 

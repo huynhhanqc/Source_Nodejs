@@ -1,41 +1,48 @@
-class QuotationExcel {
+ class QuotationExcel {
   
-  get receivingTime() {
-    return $("");
+  get SelectTime() {
+    return $("//*[@id='receivingTime']");
   }
-  get quotationType() {
-    return $("");
+  get SetTime() {
+    return $("//*[@class='flatpickr-day 'and text()='29']");
   }
-  get requireVat() {
-    return $("");
+  get SelectType() {
+    return $("//*[@aria-labelledby='select2-quotationType-container']/parent::*");
   }
-  get note() {
-    return $("");
+  get TypeTester() {
+    return $("(//li[text()='Tester']/parent::*)[1]");
   }
-  get uploadexcel() {
+  get RequireVat() {
+    return $("//*[@id='quotationConfig']/parent::*");
+  }
+  get Note() {
+    return $("//*[@id='quotationNote']");
+  }
+  get UploadExcel() {
     return $("//input[@id='excelFile']");
   }
-  get importbysku() {
+  get ImportbySku() {
     return $("//div[@class='import-type']//label[text()='Import by sku']");
   }
-  get importbyBarcode() {
+  get ImportbyBarcode() {
     return $("//div[@class='import-type']//label[text()='Import by barcode']");
   }
-  get btnValidate() {
+  get BtnValidate() {
     return $("//*[text()='Validate File']/parent::*");
   }
-  get btnSaveQuotation() {
+  get BtnSaveQuotation() {
     return $("//*[@id='saveQuotation']");
   }
-  get btnOK() {
+  get BtnOK() {
     return $("//button[text()='OK']");
   }
-  get titleReview () {
+  get TitleReview () {
     return $("//div[text()=' Quotation Review ']");
   }
 
-  get btnRequest () {
+  get BtnRequest () {
     return $("//*[text()='Request to confirm']");
   }
+  
 }
 export default new QuotationExcel();
