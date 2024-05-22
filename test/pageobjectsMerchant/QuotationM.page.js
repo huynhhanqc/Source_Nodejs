@@ -1,79 +1,106 @@
 class QuotationM {
-  get SelectTime() {
-    return $("//*[@id='receivingTime']");
+  get SelectTime () {
+    return $("//*[@id='receivingTime']")
   }
-  get SetTime() {
-    return $("//*[@class='flatpickr-day 'and text()='29']");
+  get SetTime () {
+    return $("//*[@class='flatpickr-day 'and text()='29']")
   }
-  get QuotationType() {
+  get QuotationType () {
     return $(
       "//*[@aria-labelledby='select2-quotationType-container']/parent::*"
-    );
+    )
   }
-  get TypeTester() {
-    return $("(//li[text()='Tester']/parent::*)[1]");
+  get TypeTester () {
+    return $("(//li[text()='Tester']/parent::*)[1]")
   }
-  get RequireVAT() {
-    return $("//*[@id='quotationConfig']/parent::*");
+  get TypeGift () {
+    return $("(//li[text()='Gift']/parent::*)")
   }
-  get Note() {
-    return $("//*[@id='quotationNote']");
+  get RequireVAT () {
+    return $("//*[@id='quotationConfig']/parent::*")
   }
-  get Store() {
-    return $("//*[@id='select2-store_1-container']/parent::*");
+  get Note () {
+    return $("//*[@id='quotationNote']")
   }
-  get StoreLVQ() {
+  get Store () {
+    return $("//*[@id='select2-store_1-container']/parent::*")
+  }
+  get MultiStores () {
+    return $("//*[@role='option'and text()='MULTI STORES']")
+  }
+  get StoreLVQ () {
+    return $("//*[@role='option'and text()='SHOP - 304 LE VAN QUOI']")
+  }
+  get StoreLVQLTT () {
+    return $("//*[@role='option'and text()='SHOP - 104 LE TRONG TAN']")
+  }
+  get StoreLVQPVT () {
+    return $("//*[@role='option'and text()='SHOP - 447 PHAN VAN TRI']")
+  }
+  get Product () {
+    return $("//*[text()='Search for a product']/parent::span");
+  }
+  get Inputsku () {
+    return $("//input[@role='searchbox']")
+  }
+  get Acceptsku () {
+    return $("//ul[@role='listbox']//div[4]")
+  }
+  get Quantity () {
+    return $('#qty_1')
+  }
+  get Discount () {
+    return $('#discount_1')
+  }
+  get Type () {
+    return $('#discount_type_1')
+  }
+  get Typevnd () {
+    return $("//*[text()=' VND']")
+  }
+  get Acction () {
     return $(
-      "//*[@id='select2-store_1-result-efmg-1024'and text()='SHOP - 304 LE VAN QUOI']"
-    );
+      "//*[@class='bi bi-dash-circle-fill red icon-delete fa-lg']/parent::*"
+    )
   }
-  get StoreLVQLTT() {
-    return $("//*[@id='select2-store_1-result-efmg-1024'and text()='SHOP - 104 LE TRONG TAN']");
+  get Addnewrow () {
+    return $('#addRow')
   }
-  get StoreLVQPVT() {
-    return $("//*[@id='select2-store_1-result-efmg-1024'and text()='SHOP - 447 PHAN VAN TRI']");
+  get Btncancel () {
+    return $("//a[@class='btn btn-secondary btn-sm']//i")
   }
-  get Product() {
-    return $("//*[@aria-labelledby='select2-selectProductSku_1-container']");
+  get Btnsave () {
+    return $('#btnSaveQuotationDetail')
   }
-  get Inputsku() {
-    return $("//input[@role='searchbox']");
+  get Pupok () {
+    return $("//div[@class='swal2-actions']//button[1]")
   }
-  get Acceptsku() {
-    return $("//ul[@role='listbox']//div[4]");
+  get BtnResqst () {
+    return $("//div[@class='card-toolbar']//a[3]")
   }
-  get Quantity() {
-    return $("#qty_1");
+  get TextCode () {
+    return $("//div[@class='card-body bg-light-info']//p[1]")
   }
-  get Discount() {
-    return $("#discount_1");
+
+  // Quotation All Store
+  get ZoneBd () {
+    return $("//input[@id='checkbox_1']");
   }
-  get Type() {
-    return $("#discount_type_1");
+  get BtnUseStore () {
+    return $("//*[@id='btnUseStore']");
   }
-  get Typevnd() {
-    return $("//*[text()=' VND']");
+  get BtnAllocate ()
+  {
+    return $("//*[@onclick='openAllocateQtyModal(1)']");
   }
-  get Acction() {
-    return $("//*[@class='bi bi-dash-circle-fill red icon-delete fa-lg']/parent::*");
+  get BtnCloseAllocate ()
+  {
+    return $("//button[text()='Close']");
   }
-  get Addnewrow() {
-    return $("#addRow");
+  get SalesAllocationbyOrder ()
+  {
+    return $("//input[@id='allocationMethod_2']");
   }
-  get Btncancel() {
-    return $("//a[@class='btn btn-secondary btn-sm']//i");
-  }
-  get Btnsave() {
-    return $("#btnSaveQuotationDetail");
-  }
-  get Pupok() {
-    return $("//div[@class='swal2-actions']//button[1]");
-  }
-  get BtnResqst() {
-    return $("//div[@class='card-toolbar']//a[3]");
-  }
-  get TextCode() {
-    return $("//div[@class='card-body bg-light-info']//p[1]");
-  }
+  
 }
-export default new QuotationM();
+export default new QuotationM()

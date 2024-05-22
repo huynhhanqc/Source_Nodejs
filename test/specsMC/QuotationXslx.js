@@ -32,8 +32,6 @@ describe("Quotation Import Excel", async () => {
   });
   it('Import Excell Product Success',async () => {
     await MenuMC.CreateQuotationExcel.click();
-    await ImportExcel.SelectTime.click ();
-    await ImportExcel.SetTime.click ();
     await ImportExcel.SelectType.click ();
     await ImportExcel.TypeTester.click ();
     await ImportExcel.BtnValidate.click ();

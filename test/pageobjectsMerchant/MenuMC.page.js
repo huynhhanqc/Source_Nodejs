@@ -26,5 +26,6 @@ class MenuMC {
   get CreatePromotion() {
     return $("(//*[text()='Add New Promotion'])[2]/parent::a");
   }
+  
 }
 export default new MenuMC();

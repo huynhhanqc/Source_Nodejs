@@ -4,7 +4,7 @@
     return $("//*[@id='receivingTime']");
   }
   get SetTime() {
-    return $("//*[@class='flatpickr-day 'and text()='29']");
+    return $("//*[@class='flatpickr-day 'and text()='6']");
   }
   get SelectType() {
     return $("//*[@aria-labelledby='select2-quotationType-container']/parent::*");
